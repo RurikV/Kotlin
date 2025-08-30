@@ -3,6 +3,10 @@ plugins {
     application
 }
 
+repositories {
+    mavenCentral()
+}
+
 val junitVersion: String by project
 val jvmTargetValue = providers.gradleProperty("jvmTarget").get()
 val junitPlatformVersion: String by project

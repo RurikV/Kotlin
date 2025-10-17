@@ -10,6 +10,9 @@ pluginManagement {
     }
 }
 
+// Make local convention plugins from build-logic available to all builds
+includeBuild("build-logic")
+
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }

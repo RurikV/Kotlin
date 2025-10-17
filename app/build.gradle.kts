@@ -3,6 +3,9 @@ plugins {
     application
 }
 
+group = "top.ajasta"
+version = "0.0.1"
+
 repositories {
     mavenCentral()
 }
@@ -26,7 +29,6 @@ java {
         languageVersion.set(JavaLanguageVersion.of(jvmTargetValue.toInt()))
     }
 }
-
 tasks.withType<Test>().configureEach {
     useJUnitPlatform()
 }
@@ -38,7 +40,6 @@ dependencies {
     // Explicit launcher to avoid Gradle's deprecated auto-loading behavior
     testRuntimeOnly("org.junit.platform:junit-platform-launcher:$junitPlatformVersion")
 }
-
 
 application {
     // For Kotlin top-level main in Main.kt, Gradle uses MainKt as the class name
